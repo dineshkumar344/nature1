@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nature Wonders</title>   
+
+  <style>
+    /* Reset some default styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-image: url('https://www.w3schools.com/w3images/forest.jpg'); /* Background image */
+      background-size: cover;
+      background-position: center;
+      color: #333;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Header Styling */
+    header {
+      background-color: rgba(76, 175, 80, 0.8); /* Transparent green */
+      color: white;
+      padding: 30px;
+      border-radius: 10px;
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      font-size: 3em;
+    }
+
+    /* Section styling */
+    section {
+      margin: 20px auto;
+      width: 80%;
+      background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    /* Button styling */
+    .btn {
+      background-color: #008CBA; /* Blue color like the sky or water */
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Button hover effect */
+    .btn:hover {
+      background-color: #007B9E;
+    }
+
+    /* Nature image styling */
+    .nature-image {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      margin-top: 30px;
+    }
+
+    /* Back link styling */
+    .back-link {
+      text-decoration: none;
+      font-size: 1.1em;
+      color: #008CBA;
+      margin-top: 20px;
+      display: inline-block;
+    }
+
+    .back-link:hover {
+      color: #007B9E;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Main content (Index) -->
+  <div id="main-content">
+    <header>
+      <h1>Exploring the Wonders of Nature</h1>
+    </header>
+
+    <section>
+      <p>
+        Nature is full of beauty and endless inspiration. From towering trees to vibrant flowers, the natural world is a testament to the incredible forces that shape our planet. We must cherish and protect nature for future generations.
+      </p>
+      <button class="btn" onclick="showDiscoverPage()">Discover More</button>
+
+      <img src="https://www.w3schools.com/w3images/mountains.jpg" alt="Nature Scenery" class="nature-image">
+    </section>
+  </div>
+
+  <!-- Discover More Page -->
+  <div id="discover-content" style="display:none;">
+    <header>
+      <h1>Discover More About Nature</h1>
+    </header>
+
+    <section>
+      <p>
+        Nature is an incredible source of inspiration, filled with life, color, and vitality. Explore forests, oceans, mountains, and deserts—each landscape holds unique beauty and mystery. Learn how to preserve these precious ecosystems!
+      </p>
+      <button class="btn">Learn More</button>
+
+      <img src="https://www.w3schools.com/w3images/forest.jpg" alt="Nature Scenery" class="nature-image">
+
+      <a href="javascript:void(0);" class="back-link" onclick="showMainPage()">Back to Home</a>
+    </section>
+  </div>
+
+  <script>
+    // Show the Discover page and hide the main page
+    function showDiscoverPage() {
+      document.getElementById("main-content").style.display = "none";
+      document.getElementById("discover-content").style.display = "block";
+    }
+
+    // Show the main page and hide the Discover page
+    function showMainPage() {
+      document.getElementById("main-content").style.display = "block";
+      document.getElementById("discover-content").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
